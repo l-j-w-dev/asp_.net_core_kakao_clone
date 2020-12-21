@@ -1,0 +1,35 @@
+﻿<div id="container">
+    <div id="top">
+        <div class='profile'></div>
+        <table>
+            <tr>
+                <td>고양이들의 코딩노트, 워이 카카오톡 PC채팅 클론코딩!</td>
+                <td>(1)</td>
+            </tr>
+            <tr>
+                @if (ViewData["like"].ToString() == "like")
+                {
+                    <td><i class="like fa fa-heart" aria-hidden="true" title="좋아요 취소"></i></td>
+                }
+                else
+                {
+                    <td><i class="like fa fa-heart-o" aria-hidden="true" title="좋아요"></i></td>
+                }
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div id="chat">
+    </div>
+    <div id="bottom">
+        <div class="chatWrap">
+            <textarea id="chatarea" spellcheck="false"></textarea>
+        </div>
+        <button class="btnSend" onclick="sendChat()" disabled>전송</button>
+        <div class="opacityWrap">
+            <input id="opacity" type="range" value="100" min="40" max="100" oninput='setOpacity(this)'>
+        </div>
+    </div>
+</div>
+
+
